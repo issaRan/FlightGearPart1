@@ -31,7 +31,7 @@ private:
     vector<string>::iterator it;
     ExpressionFactory *creator;
 public:
-    // constructor.
+    // constructor
     Parser(vector<string> &text);
     // function that used to
     void split();
