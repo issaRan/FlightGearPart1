@@ -18,6 +18,7 @@
 #include "extractExpression.h"
 #include "ConnectCommand.h"
 #include "Sleep.h"
+#include "ExpressionFactory.h"
 #include <bits/stdc++.h>
 using namespace std;
 class Parser {
@@ -28,6 +29,7 @@ private:
     map<string, Command*> commandMap;
     vector<string> &toInterpret;
     vector<string>::iterator it;
+    ExpressionFactory *creator;
 public:
     // constructor.
     Parser(vector<string> &text);

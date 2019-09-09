@@ -10,8 +10,9 @@
 #include "ClientServer.h"
 #include "socketSingelton.h"
 #include "expressionList.h"
-#define INSTRUCTIONS "test"
+#define INSTRUCTIONS "testFor"
 using namespace std;
+
 socketSingelton * socketSingelton::socket_instance = NULL;
 dictionaryPath *dictionaryPath::map_instance = NULL;
 SymbolTable *SymbolTable::map_instance = NULL;
@@ -22,7 +23,7 @@ int main(int args, char **argv) {
     lexer lexerInstance;
     vector<string> sender = lexerInstance.lexerToTextFile(argv[1]);
     Parser parser(sender);
-    parser.createCommand();
+    parser.split();
     close(socketSingelton::instance()->getSockServer());
     close(socketSingelton::instance()->getSockClient());
 }

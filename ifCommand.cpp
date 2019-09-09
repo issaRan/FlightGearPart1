@@ -26,7 +26,7 @@ void ifCommand::doCommand(vector<string> &text) {
     // check the condition
     if (condition(conditionVec)){
         Parser pars(commandsVec);
-        pars.createCommand();
+        pars.split();
     }
     iterator1++;
 }

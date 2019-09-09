@@ -26,7 +26,7 @@ void whileCommand::doCommand(vector<string> &text) {
 
     while (condition(conditionVec)){
         Parser pars(commandsVec);
-        pars.createCommand();
+        pars.split();
     }
     iterator1++;
 }
